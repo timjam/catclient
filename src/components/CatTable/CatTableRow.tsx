@@ -1,17 +1,15 @@
 import React from 'react';
+import { CatTableRowProps } from '../../types/CatClient';
 
-interface RowProps {
-  cat: {
-    'name': string,
-    'temperament': string,
-    'origin': string
-  };
-};
-const CatTableRow = (props: RowProps) => {
+const CatTableRow = (props: CatTableRowProps) => {
   const { cat } = props;
 
+  const handleClick = (event: any) => {
+    console.log(event.target);
+  };
+
   return (
-    <tr key={cat.name} data-item={cat}>
+    <tr key={cat.id} data-item={cat} onClick={(e) => handleClick(e)}>
       <td data-title="Name">{cat.name}</td>
       <td data-title="Temperament">{cat.temperament}</td>
       <td data-title="Origin">{cat.origin}</td>
