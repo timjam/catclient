@@ -1,10 +1,6 @@
 import React from 'react';
 import '../styles/SearchBox.css';
-
-interface SearchBoxProps {
-  name: string;
-  handleOnChange: Function;
-}
+import { SearchBoxProps } from '../types/GenericComponents';
 
 const SearchBox = (props: SearchBoxProps) => {
   return (
