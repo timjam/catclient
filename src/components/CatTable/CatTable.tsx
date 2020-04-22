@@ -2,9 +2,11 @@ import React from 'react';
 import CatTableRow from './CatTableRow';
 import '../../styles/CatTable.css';
 import { CatTableProps } from '../../types/CatClient';
+import { Table } from 'react-bootstrap';
+import CatTableHeader from './CatTableHeader';
 
 const CatTable = (props: CatTableProps) => {
-  const { temperamentSelector, originSelector } = props;
+  const { temperamentSelector, originSelector, handleRowClick } = props;
 
   const cats = props.cats.filter(cat => {
     if (originSelector && !temperamentSelector) {
@@ -23,18 +25,17 @@ const CatTable = (props: CatTableProps) => {
   });
 
   return (
-    <table className="CatTable">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Temperament</th>
-          <th>Origin</th>
-        </tr>
-      </thead>
+    <Table striped bordered hover variant="dark" size="sm" responsive>
+      <CatTableHeader />
       <tbody>
-        { cats.map(cat => <CatTableRow cat={cat} />) }
+        { cats.map(cat => <CatTableRow key={cat.id} cat={cat} handleClick={handleRowClick} />) }
       </tbody>
-    </table>
+      <tfoot style={{ textAlign: 'center' }}>
+        <tr>
+          <td colSpan={3}>Click the rows!</td>
+        </tr>
+      </tfoot>
+    </Table>
   )
 }
 
