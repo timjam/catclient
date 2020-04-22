@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/SearchBox.css';
-import { SearchBoxProps } from '../types/GenericComponents';
+import '../../styles/SearchBox.css';
+import { SearchBoxProps } from '../../types/GenericComponents';
 import { Form } from 'react-bootstrap';
 
 const SearchBox = (props: SearchBoxProps) => {

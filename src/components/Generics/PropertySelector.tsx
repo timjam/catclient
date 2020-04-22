@@ -1,5 +1,5 @@
 import React from 'react';
-import { PropertySelectorProps } from '../types/GenericComponents';
+import { PropertySelectorProps } from '../../types/GenericComponents';
 import { Form } from 'react-bootstrap';
 
 const PropertySelector = (props: PropertySelectorProps) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchBox from '../SearchBox';
-import PropertySelector from '../PropertySelector';
+import SearchBox from '../Generics/SearchBox';
+import PropertySelector from '../Generics/PropertySelector';
 import { CTTBProps } from '../../types/CatClient';
 import { Row, Col, Form } from 'react-bootstrap';
 
