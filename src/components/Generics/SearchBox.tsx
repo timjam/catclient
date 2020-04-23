@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/SearchBox.css';
+// import '../../styles/SearchBox.css';
 import { SearchBoxProps } from '../../types/GenericComponents';
 import { Form } from 'react-bootstrap';
 

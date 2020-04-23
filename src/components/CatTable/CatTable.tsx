@@ -1,6 +1,5 @@
 import React from 'react';
 import CatTableRow from './CatTableRow';
-import '../../styles/CatTable.css';
 import { CatTableProps } from '../../types/CatClient';
 import { Table } from 'react-bootstrap';
 import CatTableHeader from './CatTableHeader';
