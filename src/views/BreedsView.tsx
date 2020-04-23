@@ -48,7 +48,7 @@ const BreedsView = () => {
   const debouncedSearchText = useDebounce(searchText, 500);
 
   const getCats = async (name: string) => {
-    const URL = name ? `/breeds/?name=${name}` : '/breeds/'
+    const URL = name ? `http://35.228.250.168/breeds/?name=${name}` : 'http://35.228.250.168/breeds/'
     const response = await fetch(URL);
     const cats = (await response.json()) as Array<Cat>;
     setCats(cats);
@@ -66,7 +66,7 @@ const BreedsView = () => {
    * This solution is here just to use the /breeds/:id endpoint
    */  
   const getCat = async (id: number) => {
-    const response = await fetch(`/breeds/${id}`);
+    const response = await fetch(`http://35.228.250.168/breeds/${id}`);
     const data = await response.json();
     setCat(data);
     setShow(true);
