@@ -95,31 +95,29 @@ const BreedsView = () => {
   }
 
   return (
-    <>
-      <Container fluid="md" style={bvcontainer}>
-        <CatTableToolBar
-          selectedTemperament={temperamentSelector}
-          selectedOrigin={originSelector}
-          temperaments={tempraments}
-          origins={origins}
-          selectTemperament={selectTemperament}
-          selectOrigin={selectOrigin}
-          searchText={searchText}
-          changeSearchText={changeSearchText}
-          />
-        <CatTable
-          cats={cats}
-          temperamentSelector={temperamentSelector}
-          originSelector={originSelector}
-          handleRowClick={selectRow}
-          />
-        <CatModal
-          cat={cat}
-          show={show}
-          handleClose={handleClose}
+    <Container fluid="md" style={bvcontainer}>
+      <CatTableToolBar
+        selectedTemperament={temperamentSelector}
+        selectedOrigin={originSelector}
+        temperaments={tempraments}
+        origins={origins}
+        selectTemperament={selectTemperament}
+        selectOrigin={selectOrigin}
+        searchText={searchText}
+        changeSearchText={changeSearchText}
         />
-      </Container>
-    </>
+      <CatTable
+        cats={cats}
+        temperamentSelector={temperamentSelector}
+        originSelector={originSelector}
+        handleRowClick={selectRow}
+        />
+      <CatModal
+        cat={cat}
+        show={show}
+        handleClose={handleClose}
+      />
+    </Container>
   );
 };
 
