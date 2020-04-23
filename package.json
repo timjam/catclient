@@ -15,6 +15,7 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "serve": "^11.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -38,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3456",
+  "proxy": "http://35.228.250.168",
   "devDependencies": {
     "@types/react-bootstrap": "^1.0.0"
   }
